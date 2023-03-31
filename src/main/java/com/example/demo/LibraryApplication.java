@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class EcosystemGameApplication {
+public class LibraryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EcosystemGameApplication.class, args);
+        SpringApplication.run(LibraryApplication.class, args);
     }
 
     @GetMapping("/hello")
