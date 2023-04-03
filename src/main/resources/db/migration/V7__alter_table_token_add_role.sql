@@ -1,0 +1,2 @@
+ALTER TABLE lms.tokens
+ADD COLUMN role VARCHAR(255);
