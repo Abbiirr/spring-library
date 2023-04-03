@@ -28,6 +28,12 @@ public class BookController {
     public List<Book> findAll() {
         return bookService.findAll();
     }
+
+    @GetMapping("/search")
+    public List<Book> searchBooks(String query, String author, String genre) {
+    return bookRepository.searchBooks(query, author, genre);
+}
+
 }
 
 
