@@ -25,6 +25,19 @@ public class Book {
     @Column(name = "status", nullable = false)
     private BookStatus status = BookStatus.available;
 
+    public Book(long l, String s, String s1, String s2, String s3, BookStatus bookStatus) {
+        this.id = l;
+        this.name = s;
+        this.author = s1;
+        this.shortDescription = s2;
+        this.genre = s3;
+        this.status = bookStatus;
+    }
+
+    public Book() {
+
+    }
+
     // ... getters and setters
     public Long getId() {
         return id;
@@ -75,9 +88,6 @@ public class Book {
     }
 }
 
-enum BookStatus {
-    available,
-    borrowed,
-}
+
 
 
