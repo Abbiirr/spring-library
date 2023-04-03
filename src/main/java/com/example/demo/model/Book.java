@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.example.demo.enums.BookStatus;
 import jakarta.persistence.*;
 @Entity
 @Table(name = "books")
