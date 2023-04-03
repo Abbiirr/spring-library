@@ -9,9 +9,12 @@ import java.util.List;
 
 @Service
 public class BookService {
-    @Autowired
+
     private BookRepository bookRepository;
 
+    public BookService(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 //    public List<Book> searchBooks(String query, String author, String genre) {
 //        if (query == null && author == null && genre == null) {
 //            // if all query parameters are empty, return all books
