@@ -1,11 +1,17 @@
 package com.example.demo.model;
 
 import com.example.demo.enums.Role;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "users")
 public class User {
-    private int id;
+    @Id
+    private long id;
     private String email;
     private String password;
     private String username;
@@ -32,7 +38,7 @@ public User(int id, String email, String password, String username, Role role, L
     public User() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -105,7 +111,9 @@ public User(int id, String email, String password, String username, Role role, L
     }
 
 
-
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }
 
