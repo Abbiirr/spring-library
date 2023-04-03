@@ -1,0 +1,1 @@
+ALTER TABLE lms.users ADD updated_at DATETIME;
