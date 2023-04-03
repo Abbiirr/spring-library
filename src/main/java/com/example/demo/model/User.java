@@ -15,7 +15,7 @@ public class User {
     private String email;
     private String password;
     private String username;
-    private Role role;
+    private String role;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private String accessToken;
@@ -23,7 +23,7 @@ public class User {
 
     // Constructor, getters, setters
 
-public User(int id, String email, String password, String username, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, String accessToken, String status) {
+public User(int id, String email, String password, String username, String role, LocalDateTime createdAt, LocalDateTime updatedAt, String accessToken, String status) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -70,11 +70,11 @@ public User(int id, String email, String password, String username, Role role, L
         this.username = username;
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
