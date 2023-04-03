@@ -104,7 +104,7 @@ public User(int id, String email, String password, String username, Role role, L
         this.status = status;
     }
 
-    
+
 
 
 }
