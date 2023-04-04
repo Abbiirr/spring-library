@@ -42,6 +42,12 @@ public class AuthController {
       user.setRole(Role.Student.name());
     }
 
+    // Hash the user's password using BCrypt
+  String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+
+  // Set the hashed password on the user object
+  user.setPassword(hashedPassword);
+
     // Set user status to active
     user.setStatus("online");
 
